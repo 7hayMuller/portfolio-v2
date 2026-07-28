@@ -300,7 +300,7 @@
                 <div class="project-item__right">
                   <a
                       class="project-item__link"
-                      href="#"
+                      href="https://github.com/7hayMuller/nlw-nearby"
                       target="_blank"
                       rel="noopener"
                       >Ver site ↗</a
@@ -348,6 +348,27 @@
               <feGaussianBlur
                 in="SourceGraphic"
                 stdDeviation="16"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11"
+                result="gooey"
+              />
+              <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+            </filter>
+            <filter
+              id="melt-gooey-mobile"
+              color-interpolation-filters="sRGB"
+              x="-10%"
+              y="-10%"
+              width="120%"
+              height="120%"
+            >
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="5"
                 result="blur"
               />
               <feColorMatrix

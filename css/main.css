@@ -1446,9 +1446,9 @@ body {
   .melt__drip--10 {
     display: none;
   }
-  /* o blur do filtro gooey fica pesado demais em gotas pequenas no mobile, deixando tudo borrado */
+  /* blur proporcional ao tamanho menor das gotas no mobile, senão fica borrado ou pontudo */
   .melt__gooey {
-    filter: none;
+    filter: url(#melt-gooey-mobile);
   }
 }
 
