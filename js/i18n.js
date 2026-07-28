@@ -48,8 +48,6 @@ const translations = {
 };
 
 function detectLang() {
-  const saved = localStorage.getItem('lang');
-  if (saved === 'pt' || saved === 'en') return saved;
   return navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en';
 }
 
@@ -67,17 +65,6 @@ function applyLang(lang) {
     if (value != null) el.setAttribute('alt', value);
   });
 
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.classList.toggle('is-active', btn.dataset.lang === lang);
-  });
-
-  localStorage.setItem('lang', lang);
 }
 
 applyLang(detectLang());
-
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.lang-btn');
-  if (!btn) return;
-  applyLang(btn.dataset.lang);
-});
