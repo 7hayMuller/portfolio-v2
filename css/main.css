@@ -1438,7 +1438,7 @@ body {
 /* ── MELT TRANSITION ── */
 @media (max-width: 768px) {
   .melt-transition {
-    height: 220px;
+    height: 245px;
   }
   /* menos gotas no mobile para não ficar poluído */
   .melt__drip--2,
@@ -1449,11 +1449,11 @@ body {
     display: none;
   }
   /* larguras/alturas próprias no mobile — os valores do desktop ficavam finos e espremidos */
-  .melt__drip--1 { width: 19%; height: 110px; }
-  .melt__drip--7 { width: 16%; height: 100px; }
-  .melt__drip--4 { width: 21%; height: 150px; }
-  .melt__drip--5 { width: 17%; height: 95px;  }
-  .melt__drip--6 { width: 13%; height: 125px; }
+  .melt__drip--1 { width: 19%; height: 135px; }
+  .melt__drip--7 { width: 16%; height: 120px; }
+  .melt__drip--4 { width: 21%; height: 175px; }
+  .melt__drip--5 { width: 17%; height: 115px; }
+  .melt__drip--6 { width: 13%; height: 145px; }
   /* blur proporcional ao tamanho menor das gotas no mobile, senão fica borrado ou pontudo */
   .melt__gooey {
     filter: url(#melt-gooey-mobile);
@@ -1468,8 +1468,8 @@ body {
   }
 
   /* tamanhos reduzidos para mobile */
-  .skills__word--leveling   { font-size: clamp(28px, 8.5vw, 100px); }
-  .skills__word--up         { font-size: clamp(16px, 4.5vw, 80px); }
+  .skills__word--leveling   { font-size: clamp(32px, 9.5vw, 100px); }
+  .skills__word--up         { font-size: clamp(18px, 5vw, 80px); }
   .skills__word--interfaces { font-size: clamp(24px, 8vw, 108px); }
   .skills__word--one        { font-size: clamp(13px, 4vw, 80px); }
   .skills__word--build      { font-size: clamp(24px, 7.5vw, 100px); }
@@ -1490,9 +1490,9 @@ body {
     margin-right: 10px;
   }
 
-  /* raio ocupa 300px mínimos — esconde no mobile */
+  /* raio mantém a sobreposição com o INTERFACES, igual no desktop, só que menor */
   .skills__lightning {
-    display: none;
+    width: clamp(90px, 30vw, 160px);
   }
 
   .skills__line--3 {
