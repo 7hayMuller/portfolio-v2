@@ -13,6 +13,45 @@ if (window.LetterGlitch) {
   });
 }
 
+// ── CONTACT: copiar email para o clipboard ──
+const emailCard = document.querySelector('.ccard--email');
+if (emailCard) {
+  const email = emailCard.dataset.email;
+  const tag = emailCard.querySelector('.ccard__tag');
+  const originalTagKey = tag ? tag.getAttribute('data-i18n') : null;
+  const originalTagText = tag ? tag.textContent : '';
+  let resetTimer;
+
+  emailCard.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (err) {
+      const ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+
+    if (tag) {
+      clearTimeout(resetTimer);
+      const lang = typeof detectLang === 'function' ? detectLang() : 'pt';
+      tag.removeAttribute('data-i18n');
+      tag.textContent = (translations[lang] && translations[lang]['contact.copied']) || 'Copiado!';
+      emailCard.classList.add('is-copied');
+
+      resetTimer = setTimeout(() => {
+        if (originalTagKey) tag.setAttribute('data-i18n', originalTagKey);
+        tag.textContent = originalTagText;
+        emailCard.classList.remove('is-copied');
+      }, 1800);
+    }
+  });
+}
+
 gsap.from('.about__arrow', {
   x: 80,
   y: -80,
