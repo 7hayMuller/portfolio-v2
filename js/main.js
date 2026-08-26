@@ -123,95 +123,134 @@ ScrollTrigger.create({
 });
 
 
-// ── THREE.JS AVATAR ──
-const canvas = document.getElementById('avatarCanvas');
-const renderer = new THREE.WebGLRenderer({
-  canvas,
-  alpha: true,
-  antialias: true
-});
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.outputEncoding = THREE.sRGBEncoding;
+// ── THREE.JS AVATAR (lazy: só inicializa quando #skills entra na tela) ──
+(function () {
+  const canvas = document.getElementById('avatarCanvas');
+  if (!canvas) return;
 
-const scene = new THREE.Scene();
+  let renderer, scene, camera, avatar;
+  let mouseInfluenceX = 0;
+  let mouseInfluenceY = 0;
+  let autoRotation = 0;
+  let rafId = null;
+  let initialized = false;
 
-const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-camera.position.set(0, 0.5, 2.5)
-
-function resizeAvatarRenderer() {
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
-  if (!width || !height) return;
-  renderer.setSize(width, height, false);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-}
-resizeAvatarRenderer();
-window.addEventListener('resize', resizeAvatarRenderer);
-
-// iluminação
-const ambient = new THREE.AmbientLight(0xffffff, 0.6);
-scene.add(ambient);
-
-const dirLight = new THREE.DirectionalLight(0x7B2FFF, 1.2);
-dirLight.position.set(2, 4, 3);
-scene.add(dirLight);
-
-const dirLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
-dirLight2.position.set(-2, 2, -2);
-scene.add(dirLight2);
-
-// avatar
-let avatar;
-let mouseInfluenceX = 0;
-let mouseInfluenceY = 0;
-
-const loader = new THREE.GLTFLoader();
-loader.load(
-  'assets/models/avatar.glb',
-  (gltf) => {
-    avatar = gltf.scene;
-
-    const box = new THREE.Box3().setFromObject(avatar);
-    const center = box.getCenter(new THREE.Vector3());
-    avatar.position.sub(center);
-
-    const size = box.getSize(new THREE.Vector3());
-    const maxDim = Math.max(size.x, size.y, size.z);
-    avatar.scale.setScalar(1.8 / maxDim);
-
-    avatar.position.y = 0.5;
-
-    scene.add(avatar);
-    console.log('avatar adicionado à cena!');
-  },
-  undefined,
-  (error) => console.error('Erro:', error)
-);
-
-
-let autoRotation = 0;
-
-document.addEventListener('mousemove', e => {
-  const nx = (e.clientX / window.innerWidth  - 0.5) * 2;
-  const ny = (e.clientY / window.innerHeight - 0.5) * 2;
-  mouseInfluenceX =  nx * 0.4;
-  mouseInfluenceY = -ny * 0.2;
-});
-
-function animateAvatar() {
-  requestAnimationFrame(animateAvatar);
-  if (avatar) {
-    // rotação automática independente
-    autoRotation += 0.04;
-    
-    // mouse adiciona por cima, não interfere
-    avatar.rotation.y = autoRotation + mouseInfluenceX;
-    avatar.rotation.x += (mouseInfluenceY - avatar.rotation.x) * 0.05;
+  function resizeAvatarRenderer() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (!width || !height) return;
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
   }
-  renderer.render(scene, camera);
-}
-animateAvatar();
+
+  function initAvatar() {
+    if (initialized) return;
+    initialized = true;
+
+    renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.outputEncoding = THREE.sRGBEncoding;
+
+    scene = new THREE.Scene();
+
+    camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.set(0, 0.5, 2.5);
+
+    resizeAvatarRenderer();
+    window.addEventListener('resize', resizeAvatarRenderer);
+
+    // iluminação
+    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambient);
+
+    const dirLight = new THREE.DirectionalLight(0x7B2FFF, 1.2);
+    dirLight.position.set(2, 4, 3);
+    scene.add(dirLight);
+
+    const dirLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
+    dirLight2.position.set(-2, 2, -2);
+    scene.add(dirLight2);
+
+    const loader = new THREE.GLTFLoader();
+    loader.load(
+      'assets/models/avatar.glb',
+      (gltf) => {
+        avatar = gltf.scene;
+
+        const box = new THREE.Box3().setFromObject(avatar);
+        const center = box.getCenter(new THREE.Vector3());
+        avatar.position.sub(center);
+
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        avatar.scale.setScalar(1.8 / maxDim);
+
+        avatar.position.y = 0.5;
+
+        scene.add(avatar);
+      },
+      undefined,
+      (error) => console.error('Erro:', error)
+    );
+
+    document.addEventListener('mousemove', (e) => {
+      const nx = (e.clientX / window.innerWidth - 0.5) * 2;
+      const ny = (e.clientY / window.innerHeight - 0.5) * 2;
+      mouseInfluenceX = nx * 0.4;
+      mouseInfluenceY = -ny * 0.2;
+    });
+  }
+
+  function animateAvatar() {
+    rafId = requestAnimationFrame(animateAvatar);
+    if (avatar) {
+      // rotação automática independente
+      autoRotation += 0.04;
+
+      // mouse adiciona por cima, não interfere
+      avatar.rotation.y = autoRotation + mouseInfluenceX;
+      avatar.rotation.x += (mouseInfluenceY - avatar.rotation.x) * 0.05;
+    }
+    renderer.render(scene, camera);
+  }
+
+  function startLoop() {
+    if (rafId == null) animateAvatar();
+  }
+
+  function stopLoop() {
+    if (rafId != null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initAvatar();
+          if (!document.hidden) startLoop();
+        } else {
+          stopLoop();
+        }
+      });
+    },
+    { rootMargin: '200px 0px' }
+  );
+  io.observe(canvas);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopLoop();
+    } else if (initialized) {
+      const rect = canvas.getBoundingClientRect();
+      const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (inView) startLoop();
+    }
+  });
+})();
 
 // ── SKILL CONNECTORS ──
 function drawSkillConnectors() {

@@ -220,7 +220,7 @@ body {
       rgba(10, 10, 15, 0.4) 50%,
       rgba(10, 10, 15, 0.95) 100%
     ),
-    url("../assets/images/aboutImage.png") center / cover no-repeat;
+    url("../assets/images/aboutImage.jpg") center / cover no-repeat;
   position: relative;
   overflow: hidden;
   display: flex;
