@@ -176,16 +176,19 @@ ScrollTrigger.create({
     loader.load(
       'assets/models/avatar.glb',
       (gltf) => {
-        avatar = gltf.scene;
+        const model = gltf.scene;
 
-        const box = new THREE.Box3().setFromObject(avatar);
-        const center = box.getCenter(new THREE.Vector3());
-        avatar.position.sub(center);
-
-        const size = box.getSize(new THREE.Vector3());
+        // escala primeiro, depois centraliza (independe da origem do modelo)
+        const size = new THREE.Box3().setFromObject(model).getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
-        avatar.scale.setScalar(1.8 / maxDim);
+        model.scale.setScalar(1.6 / maxDim);
 
+        const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
+        model.position.sub(center);
+
+        // pivot no centro do modelo para girar em torno do próprio eixo
+        avatar = new THREE.Group();
+        avatar.add(model);
         avatar.position.y = 0.5;
 
         scene.add(avatar);
@@ -206,7 +209,7 @@ ScrollTrigger.create({
     rafId = requestAnimationFrame(animateAvatar);
     if (avatar) {
       // rotação automática independente
-      autoRotation += 0.04;
+      autoRotation += 0.015;
 
       // mouse adiciona por cima, não interfere
       avatar.rotation.y = autoRotation + mouseInfluenceX;
