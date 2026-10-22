@@ -643,10 +643,11 @@ body {
 
 .melt__gooey {
   position: absolute;
-  top: -10px;
+  /* topo bem acima da área visível: a borda da camada gera relevo falso na iluminação do filtro */
+  top: -60px;
   left: 0;
   width: 100%;
-  height: calc(100% + 10px);
+  height: calc(100% + 60px);
   filter: url(#melt-gooey);
 }
 
@@ -655,29 +656,31 @@ body {
   top: 0;
   left: -5%;
   width: 110%;
-  height: 90px;
-  background: linear-gradient(180deg, #f5f2ed 0%, #eeebe5 100%);
+  height: 140px;
+  /* cor sólida igual às gotas: o volume vem do filtro, aplicado na forma já unida */
+  background: #f5f2ed;
   transform-origin: center top;
 }
 
 .melt__drip {
   position: absolute;
-  top: 0;
+  top: 50px;
   border-radius: 50% 50% 45% 45%;
+  background: #f5f2ed;
   transform: scaleY(0);
   transform-origin: top center;
 }
 
-.melt__drip--1 { left: 3%;  width: 10%; height: 150px; background: radial-gradient(ellipse at 40% 25%, #fff, #f5f2ed 50%, #e0ddd8); }
-.melt__drip--2 { left: 15%; width: 13%; height: 260px; background: radial-gradient(ellipse at 38% 20%, #fff, #f5f2ed 48%, #dedad5); }
-.melt__drip--3 { left: 34%; width: 8%;  height: 110px; background: radial-gradient(ellipse at 42% 28%, #fff, #f5f2ed 45%, #e2dfd9); }
-.melt__drip--4 { left: 48%; width: 12%; height: 210px; background: radial-gradient(ellipse at 36% 22%, #fff, #f5f2ed 50%, #dbd8d2); }
-.melt__drip--5 { left: 68%; width: 9%;  height: 290px; background: radial-gradient(ellipse at 41% 26%, #fff, #f5f2ed 44%, #e0ddd7); }
-.melt__drip--6 { left: 87%; width: 11%; height: 180px; background: radial-gradient(ellipse at 43% 27%, #fff, #f5f2ed 43%, #e3e0da); }
-.melt__drip--7 { left: 24%; width: 8%;  height: 220px; background: radial-gradient(ellipse at 39% 24%, #fff, #f5f2ed 47%, #dedad4); }
-.melt__drip--8 { left: 58%; width: 9%;  height: 150px; background: radial-gradient(ellipse at 44% 23%, #fff, #f5f2ed 46%, #e1ded8); }
-.melt__drip--9 { left: 40%; width: 7%;  height: 190px; background: radial-gradient(ellipse at 37% 21%, #fff, #f5f2ed 49%, #dcd9d3); }
-.melt__drip--10 { left: 77%; width: 8%; height: 160px; background: radial-gradient(ellipse at 45% 25%, #fff, #f5f2ed 46%, #e2dfda); }
+.melt__drip--1 { left: 3%;  width: 10%; height: 150px; }
+.melt__drip--2 { left: 15%; width: 13%; height: 260px; }
+.melt__drip--3 { left: 34%; width: 8%;  height: 110px; }
+.melt__drip--4 { left: 48%; width: 12%; height: 210px; }
+.melt__drip--5 { left: 68%; width: 9%;  height: 290px; }
+.melt__drip--6 { left: 87%; width: 11%; height: 180px; }
+.melt__drip--7 { left: 24%; width: 8%;  height: 220px; }
+.melt__drip--8 { left: 58%; width: 9%;  height: 150px; }
+.melt__drip--9 { left: 40%; width: 7%;  height: 190px; }
+.melt__drip--10 { left: 77%; width: 8%; height: 160px; }
 
 /* ── SKILLS ── */
 #skills {
@@ -1462,7 +1465,7 @@ body {
     height: 245px;
   }
   .melt__ceiling {
-    height: 60px;
+    height: 110px;
   }
   .melt__drip--2,
   .melt__drip--3,

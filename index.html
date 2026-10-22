@@ -465,7 +465,30 @@
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11"
                 result="gooey"
               />
-              <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si -->
+              <feGaussianBlur in="gooey" stdDeviation="8" result="bump" />
+              <feSpecularLighting
+                in="bump"
+                surfaceScale="5"
+                specularConstant="0.55"
+                specularExponent="30"
+                lighting-color="#ffffff"
+                result="shine"
+              >
+                <feDistantLight azimuth="235" elevation="25" />
+              </feSpecularLighting>
+              <feComposite in="shine" in2="gooey" operator="in" result="shineIn" />
+              <feDiffuseLighting
+                in="bump"
+                surfaceScale="5"
+                diffuseConstant="1"
+                lighting-color="#ffffff"
+                result="shade"
+              >
+                <feDistantLight azimuth="235" elevation="90" />
+              </feDiffuseLighting>
+              <feComposite in="gooey" in2="shade" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="shaded" />
+              <feComposite in="shineIn" in2="shaded" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
             </filter>
             <filter
               id="melt-gooey-mobile"
@@ -486,7 +509,30 @@
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11"
                 result="gooey"
               />
-              <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si -->
+              <feGaussianBlur in="gooey" stdDeviation="5" result="bump" />
+              <feSpecularLighting
+                in="bump"
+                surfaceScale="5"
+                specularConstant="0.55"
+                specularExponent="30"
+                lighting-color="#ffffff"
+                result="shine"
+              >
+                <feDistantLight azimuth="235" elevation="25" />
+              </feSpecularLighting>
+              <feComposite in="shine" in2="gooey" operator="in" result="shineIn" />
+              <feDiffuseLighting
+                in="bump"
+                surfaceScale="5"
+                diffuseConstant="1"
+                lighting-color="#ffffff"
+                result="shade"
+              >
+                <feDistantLight azimuth="235" elevation="90" />
+              </feDiffuseLighting>
+              <feComposite in="gooey" in2="shade" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="shaded" />
+              <feComposite in="shineIn" in2="shaded" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
             </filter>
           </defs>
         </svg>
