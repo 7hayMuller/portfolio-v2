@@ -465,22 +465,26 @@
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11"
                 result="gooey"
               />
-              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si -->
-              <feGaussianBlur in="gooey" stdDeviation="8" result="bump" />
+              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si; bump mais largo + surfaceScale alto = volume arredondado -->
+              <feGaussianBlur in="gooey" stdDeviation="14" result="bump" />
               <feSpecularLighting
                 in="bump"
-                surfaceScale="5"
-                specularConstant="0.55"
-                specularExponent="30"
+                surfaceScale="14"
+                specularConstant="0.9"
+                specularExponent="22"
                 lighting-color="#ffffff"
                 result="shine"
               >
-                <feDistantLight azimuth="235" elevation="25" />
+                <feDistantLight azimuth="235" elevation="35" />
               </feSpecularLighting>
-              <feComposite in="shine" in2="gooey" operator="in" result="shineIn" />
+              <!-- tira o brilho que a luz gera na área plana, para o teto ficar na mesma cor da seção de cima -->
+              <feComponentTransfer in="shine" result="shineCurves">
+                <feFuncA type="linear" slope="1.1" intercept="-0.08" />
+              </feComponentTransfer>
+              <feComposite in="shineCurves" in2="gooey" operator="in" result="shineIn" />
               <feDiffuseLighting
                 in="bump"
-                surfaceScale="5"
+                surfaceScale="14"
                 diffuseConstant="1"
                 lighting-color="#ffffff"
                 result="shade"
@@ -509,22 +513,26 @@
                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -11"
                 result="gooey"
               />
-              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si -->
-              <feGaussianBlur in="gooey" stdDeviation="5" result="bump" />
+              <!-- brilho calculado sobre a forma unida, para as gotas não terem divisão entre si; bump mais largo + surfaceScale alto = volume arredondado -->
+              <feGaussianBlur in="gooey" stdDeviation="8" result="bump" />
               <feSpecularLighting
                 in="bump"
-                surfaceScale="5"
-                specularConstant="0.55"
-                specularExponent="30"
+                surfaceScale="10"
+                specularConstant="0.9"
+                specularExponent="22"
                 lighting-color="#ffffff"
                 result="shine"
               >
-                <feDistantLight azimuth="235" elevation="25" />
+                <feDistantLight azimuth="235" elevation="35" />
               </feSpecularLighting>
-              <feComposite in="shine" in2="gooey" operator="in" result="shineIn" />
+              <!-- tira o brilho que a luz gera na área plana, para o teto ficar na mesma cor da seção de cima -->
+              <feComponentTransfer in="shine" result="shineCurves">
+                <feFuncA type="linear" slope="1.1" intercept="-0.08" />
+              </feComponentTransfer>
+              <feComposite in="shineCurves" in2="gooey" operator="in" result="shineIn" />
               <feDiffuseLighting
                 in="bump"
-                surfaceScale="5"
+                surfaceScale="10"
                 diffuseConstant="1"
                 lighting-color="#ffffff"
                 result="shade"
