@@ -1461,7 +1461,9 @@ body {
   .melt-transition {
     height: 245px;
   }
-  /* menos gotas no mobile para não ficar poluído */
+  .melt__ceiling {
+    height: 60px;
+  }
   .melt__drip--2,
   .melt__drip--3,
   .melt__drip--8,
@@ -1469,12 +1471,12 @@ body {
   .melt__drip--10 {
     display: none;
   }
-  /* larguras/alturas próprias no mobile — os valores do desktop ficavam finos e espremidos */
-  .melt__drip--1 { width: 19%; height: 135px; }
-  .melt__drip--7 { width: 16%; height: 120px; }
-  .melt__drip--4 { width: 21%; height: 175px; }
-  .melt__drip--5 { width: 17%; height: 115px; }
-  .melt__drip--6 { width: 13%; height: 145px; }
+  /* poucas gotas largas, levemente sobrepostas — com espaço entre elas o goo não une; com muitas fica desfigurado */
+  .melt__drip--1 { left: -3%; width: 23%; height: 130px; }
+  .melt__drip--7 { left: 17%; width: 19%; height: 185px; }
+  .melt__drip--4 { left: 33%; width: 26%; height: 115px; }
+  .melt__drip--5 { left: 56%; width: 20%; height: 200px; }
+  .melt__drip--6 { left: 73%; width: 31%; height: 140px; }
   /* blur proporcional ao tamanho menor das gotas no mobile, senão fica borrado ou pontudo */
   .melt__gooey {
     filter: url(#melt-gooey-mobile);

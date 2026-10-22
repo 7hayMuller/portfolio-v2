@@ -3,13 +3,15 @@ const translations = {
     "hero.cta": "Case studies",
     "hero.image_alt": "Thayná na Shibuya Crossing",
     "about.text": [
-      "Eu não vejo frontend e UX como dois trabalhos diferentes — são duas formas de resolver o mesmo problema.",
-      "Nos últimos cinco anos, construí software enterprise com React e TypeScript. Com o tempo, minhas perguntas mudaram: menos sobre implementação, mais sobre pessoas. Por que essa feature existe? Que problema ela resolve? Por que essa interação é confusa? UX passou a fazer parte de como eu construo, não é uma trilha separada. Hoje trabalho entre engenharia, produto e design, construindo produtos SaaS com IA.",
-      "Gosto de estéticas com ponto de vista forte — Bauhaus, Brutalismo, Blueprint, Futurismo. Toda decisão de design deveria parecer intencional; é isso que torna uma interface memorável, não só a aparência.",
-      "Quando não estou trabalhando, você provavelmente vai me encontrar planejando minha próxima viagem, atrás de comida local autêntica, ou me apegando emocionalmente a personagens fictícios em mais um anime.",
+      "Desde o início da minha carreira, venho explorando diferentes áreas para construir uma visão cada vez mais completa sobre produtos digitais. Da pesquisa ao deploy, gosto de entender cada etapa do processo e transformar ideias em experiências que fazem sentido, têm personalidade e surpreendem.",
+      "Não sou muito fã do óbvio. Gosto de designs que comunicam algo, que têm personalidade e despertam curiosidade. Daqueles que fazem você querer explorar cada detalhe. Design com intenção, com identidade, com alma.",
+      "Sou fissurada em viajar e observar como diferentes culturas se comunicam. Como apresentam suas ideias, conquistam a atenção das pessoas e encontram maneiras únicas de resolver problemas. Gosto de perceber tanto o que nos diferencia quanto o que nos conecta.",
+      "Estou sempre procurando referências para o próximo projeto. O que começou como parte do trabalho acabou virando um hobby. E, quando não estou explorando algum efeito, animação ou combinação de cores, provavelmente estou jogando videogame, assistindo anime ou lendo um mangá.",
     ],
+    "experience.text":
+      "+5 anos desenvolvendo produtos SaaS e experiências digitais de grande escala, alcançando milhões de consumidores. Unindo React, TypeScript e UX/UI para criar soluções de alta performance, com tecnologia de ponta e identidade visual.",
     "project1.sub":
-      "Criado a partir da necessidade de organizar minha própria viagem, o My Trip Buddy rapidamente evoluiu para muito além da ideia inicial. O aplicativo reúne destinos, hotéis, voos, itinerários, orçamento, documentos e até o planejamento dos looks para cada dia das férias, centralizando tudo em uma única experiência. O projeto foi concebido para reduzir a complexidade do planejamento e oferecer ao viajante uma forma prática e agradável de visualizar toda a viagem. Para complementar essa experiência, a interface adota uma identidade inspirada no neobrutalismo, combinando um visual marcante com uma navegação intuitiva e organizada.",
+      "Criado a partir da necessidade de organizar minha própria viagem, o My Trip Buddy rapidamente evoluiu para muito além da ideia inicial. O aplicativo reúne destinos, hotéis, voos, itinerários, orçamento, documentos e até o planejamento dos looks para cada dia das férias, centralizando tudo em uma única experiência. O projeto foi concebido para reduzir a complexidade do planejamento e oferecer ao viajante uma forma prática e agradável de visualizar toda a viagem. Para complementar essa experiência, a interface adota uma identidade inspirada no neobrutalismo, combinando um visual marcante com uma navegação intuitiva e organizada. Em breve na Google Play Store!",
     "project2.sub":
       "O Party Studio é um estúdio criativo impulsionado por IA para quem quer ir além do convite tradicional. Em poucos minutos, você cria convites personalizados com fotos, vídeos e trilha sonora, transformando um simples convite em uma experiência que reflete o estilo da sua festa.",
     "project3.sub":
@@ -29,13 +31,15 @@ const translations = {
     "hero.cta": "Case Studies",
     "hero.image_alt": "Thayná at Shibuya Crossing",
     "about.text": [
-      "I don't see frontend and UX as two different jobs — they're two ways of solving the same problem.",
-      "For the past five years I've built enterprise software with React and TypeScript. Over time my questions shifted: less about implementation, more about people. Why does this feature exist? What problem does it solve? Why does this interaction feel confusing? UX became part of how I build, not a separate track. Today I work across engineering, product, and design, building SaaS and AI-powered products.",
-      "I'm drawn to aesthetics with a strong point of view — Bauhaus, Brutalism, Blueprint, Futurism. Every design decision should feel intentional; that's what makes an interface memorable, not just how it looks.",
-      "Outside of work, you'll probably find me planning my next trip, chasing authentic local food, or getting emotionally attached to fictional characters in yet another anime.",
+      "Since the beginning of my career, I've explored different disciplines to build a broader understanding of digital products. From research to deployment, I like to understand every step of the process and turn ideas into experiences that make sense, have personality, and surprise people.",
+      "I've never been a big fan of the ordinary. I'm drawn to designs that communicate something, have character, and spark curiosity. The kind that makes you want to explore every little detail. Design with intention, identity, and soul.",
+      "I'm obsessed with traveling and observing how different cultures communicate. How they express ideas, capture people's attention, and find unique ways to solve problems. I love discovering both what makes us different and what connects us.",
+      "I'm always looking for inspiration for my next project. What started as part of my job has become a hobby of its own. And when I'm not exploring a new effect, animation, or color palette, you'll probably find me playing video games, watching anime, or reading manga.",
     ],
+    "experience.text":
+      "5+ years building SaaS products and large-scale digital experiences, reaching millions of consumers. Combining React, TypeScript, and UX/UI to create high-performance solutions with cutting-edge technology and distinctive design.",
     "project1.sub":
-      "Born out of the need to organize my own trip, My Trip Buddy quickly grew far beyond its initial idea. The app brings together destinations, hotels, flights, itineraries, budget, documents, and even outfit planning for each day of the trip, centralizing everything into a single experience. It was designed to reduce the complexity of trip planning and give travelers a practical, enjoyable way to visualize the whole journey. To complement that experience, the interface adopts a neobrutalist-inspired identity, pairing a bold visual style with intuitive, organized navigation.",
+      "Born out of the need to organize my own trip, My Trip Buddy quickly grew far beyond its initial idea. The app brings together destinations, hotels, flights, itineraries, budget, documents, and even outfit planning for each day of the trip, centralizing everything into a single experience. It was designed to reduce the complexity of trip planning and give travelers a practical, enjoyable way to visualize the whole journey. To complement that experience, the interface adopts a neobrutalist-inspired identity, pairing a bold visual style with intuitive, organized navigation. Coming soon to the Google Play Store!",
     "project2.sub":
       "Party Studio is an AI-powered creative studio for anyone who wants to go beyond the traditional invitation. In just a few minutes, you create personalized invites with photos, videos, and a soundtrack, turning a simple invitation into an experience that reflects your party's style.",
     "project3.sub":
