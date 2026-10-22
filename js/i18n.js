@@ -20,7 +20,11 @@ const translations = {
       "Este projeto explora a criação de um ecossistema financeiro integrado, conectando aplicativo móvel, desktop, smartwatch e caixas eletrônicos em uma experiência consistente. Ao longo do processo, desenvolvi wireframes, fluxos de navegação e visualizações de dados financeiros adaptadas a diferentes dispositivos, sempre priorizando clareza, acessibilidade e usabilidade. O resultado é uma experiência coesa, alinhada à identidade visual do Itaú e projetada para tornar o gerenciamento financeiro mais simples, intuitivo e eficiente.",
     "project5.sub":
       "Desenvolvido para tornar a busca por benefícios mais simples e conveniente, este aplicativo reúne cupons e ofertas exclusivas de estabelecimentos próximos ao usuário em uma única experiência. O projeto foi pensado para facilitar o acesso a descontos de forma rápida e intuitiva, combinando geolocalização, integração com APIs e uma navegação fluida para conectar pessoas às melhores oportunidades ao seu redor.",
-    "project.link": "Ver site ↗",
+    "project6.sub":
+      "SEIZA 星座 é uma experiência de e-commerce desenvolvida com React e TypeScript, pensada para marcas exclusivas que desejam apresentar suas coleções de maneira única e envolvente. O projeto reinventa a vitrine tradicional através de um cabideiro virtual interativo, transformando a exploração de produtos em uma experiência mais dinâmica e imersiva. No mobile, o cabideiro se torna infinito, permitindo navegar continuamente pelas peças com gestos naturais de deslizar. Com uma interface minimalista, animações fluidas e uma identidade visual marcante, o SEIZA propõe uma forma diferente de descobrir produtos, valorizando cada peça e a personalidade de cada coleção.",
+    "project.link.code": "Ver código ↗",
+    "project.link.site": "Ver site ↗",
+    "project.link.project": "Ver projeto ↗",
     "contact.tag_main": "Quest principal",
     "contact.tag_side": "Side quest",
     "contact.copied": "Copiado!",
@@ -48,7 +52,11 @@ const translations = {
       "This project explores building an integrated financial ecosystem, connecting mobile app, desktop, smartwatch, and ATMs into one consistent experience. Along the way, I developed wireframes, navigation flows, and financial data visualizations adapted to different devices, always prioritizing clarity, accessibility, and usability. The result is a cohesive experience aligned with Itaú's visual identity, designed to make financial management simpler, more intuitive, and more efficient.",
     "project5.sub":
       "Built to make finding deals simpler and more convenient, this app brings together coupons and exclusive offers from nearby businesses into a single experience. It was designed to make accessing discounts fast and intuitive, combining geolocation, API integrations, and smooth navigation to connect people with the best opportunities around them.",
-    "project.link": "Visit site ↗",
+    "project6.sub":
+      "SEIZA 星座 is an e-commerce experience built with React and TypeScript, designed for exclusive brands looking to showcase their collections in a unique and engaging way. The project reimagines traditional product displays through an interactive virtual clothing rack, turning product discovery into a more dynamic and immersive experience. On mobile, the rack becomes an infinite, swipeable experience, allowing users to browse pieces continuously through natural touch gestures. With a minimalist interface, fluid animations, and a bold visual identity, SEIZA introduces a different approach to product discovery, highlighting each piece and the personality behind every collection.",
+    "project.link.code": "View code ↗",
+    "project.link.site": "Visit site ↗",
+    "project.link.project": "View project ↗",
     "contact.tag_main": "Main quest",
     "contact.tag_side": "Side quest",
     "contact.copied": "Copied!",

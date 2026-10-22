@@ -431,6 +431,10 @@ body {
   transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.projects__stage-media--video {
+  transform-origin: center bottom;
+}
+
 .projects__stage-media.is-visible {
   opacity: 1;
 }
