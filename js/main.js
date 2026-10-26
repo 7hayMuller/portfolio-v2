@@ -454,6 +454,7 @@ function drawSkillConnectors() {
       // zoom opcional por projeto para esconder bordas gravadas no vídeo
       const zoom = item.dataset.previewZoom;
       stageVideo.style.transform = zoom ? `scale(${zoom})` : '';
+      stageVideo.setAttribute('aria-label', alt);
       stageVideo.play().catch(() => {});
       stageVideo.classList.add('is-visible');
     } else {

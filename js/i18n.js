@@ -17,11 +17,20 @@ const translations = {
     "project3.sub":
       "Como tornar o gerenciamento de medicamentos mais simples e acessível? O Remedia nasceu dessa pergunta. A partir de pesquisa, ideação, prototipação e testes de usabilidade, desenvolvi uma solução que reduz a complexidade da experiência e prioriza clareza, inclusão e facilidade de uso.",
     "project4.sub":
-      "Este projeto explora a criação de um ecossistema financeiro integrado, conectando aplicativo móvel, desktop, smartwatch e caixas eletrônicos em uma experiência consistente. Ao longo do processo, desenvolvi wireframes, fluxos de navegação e visualizações de dados financeiros adaptadas a diferentes dispositivos, sempre priorizando clareza, acessibilidade e usabilidade. O resultado é uma experiência coesa, alinhada à identidade visual do Itaú e projetada para tornar o gerenciamento financeiro mais simples, intuitivo e eficiente.",
+      "Este projeto explora a criação de um ecossistema financeiro integrado, conectando aplicativo móvel, desktop, smartwatch e caixas eletrônicos em uma experiência consistente. Ao longo do processo, desenvolvi wireframes, fluxos de navegação e visualizações de dados financeiros adaptadas a diferentes dispositivos, sempre priorizando clareza, acessibilidade e usabilidade. O resultado é uma experiência coesa, alinhada à identidade visual do Itaú e projetada para tornar o gerenciamento financeiro mais simples, intuitivo e eficiente. Projeto acadêmico desenvolvido na EBAC em parceria com o Itaú Unibanco.",
     "project5.sub":
       "Desenvolvido para tornar a busca por benefícios mais simples e conveniente, este aplicativo reúne cupons e ofertas exclusivas de estabelecimentos próximos ao usuário em uma única experiência. O projeto foi pensado para facilitar o acesso a descontos de forma rápida e intuitiva, combinando geolocalização, integração com APIs e uma navegação fluida para conectar pessoas às melhores oportunidades ao seu redor.",
     "project6.sub":
       "SEIZA 星座 é uma experiência de e-commerce desenvolvida com React e TypeScript, pensada para marcas exclusivas que desejam apresentar suas coleções de maneira única e envolvente. O projeto reinventa a vitrine tradicional através de um cabideiro virtual interativo, transformando a exploração de produtos em uma experiência mais dinâmica e imersiva. No mobile, o cabideiro se torna infinito, permitindo navegar continuamente pelas peças com gestos naturais de deslizar. Com uma interface minimalista, animações fluidas e uma identidade visual marcante, o SEIZA propõe uma forma diferente de descobrir produtos, valorizando cada peça e a personalidade de cada coleção.",
+    "exp.tag_main": "Quest principal",
+    "exp.tag_side": "Side quest",
+    "exp.tag_first": "Fase 1",
+    "exp.spot": "Frontend Engineer & UX Designer · nov 2021 – atual",
+    "exp.n1": "Frontend Developer (Freelancer) · dez 2021 – nov 2022",
+    "exp.neki": "Full Stack Developer · nov 2020 – out 2021",
+    "edu.postgrad": "Pós-graduação em Engenharia de Software — Estácio (em andamento)",
+    "edu.degree": "Análise e Desenvolvimento de Sistemas — Estácio (jul 2026)",
+    "edu.ux": "UX/UI Design — EBAC, Escola Britânica de Artes Criativas e Tecnologia (ago 2024 – jun 2025)",
     "project.link.code": "Ver código ↗",
     "project.link.site": "Ver site ↗",
     "project.link.project": "Ver projeto ↗",
@@ -49,11 +58,20 @@ const translations = {
     "project3.sub":
       "How can medication management be made simpler and more accessible? Remedia was born from that question. Through research, ideation, prototyping, and usability testing, I developed a solution that reduces the complexity of the experience while prioritizing clarity, inclusion, and ease of use.",
     "project4.sub":
-      "This project explores building an integrated financial ecosystem, connecting mobile app, desktop, smartwatch, and ATMs into one consistent experience. Along the way, I developed wireframes, navigation flows, and financial data visualizations adapted to different devices, always prioritizing clarity, accessibility, and usability. The result is a cohesive experience aligned with Itaú's visual identity, designed to make financial management simpler, more intuitive, and more efficient.",
+      "This project explores building an integrated financial ecosystem, connecting mobile app, desktop, smartwatch, and ATMs into one consistent experience. Along the way, I developed wireframes, navigation flows, and financial data visualizations adapted to different devices, always prioritizing clarity, accessibility, and usability. The result is a cohesive experience aligned with Itaú's visual identity, designed to make financial management simpler, more intuitive, and more efficient. Academic project developed at EBAC in partnership with Itaú Unibanco.",
     "project5.sub":
       "Built to make finding deals simpler and more convenient, this app brings together coupons and exclusive offers from nearby businesses into a single experience. It was designed to make accessing discounts fast and intuitive, combining geolocation, API integrations, and smooth navigation to connect people with the best opportunities around them.",
     "project6.sub":
       "SEIZA 星座 is an e-commerce experience built with React and TypeScript, designed for exclusive brands looking to showcase their collections in a unique and engaging way. The project reimagines traditional product displays through an interactive virtual clothing rack, turning product discovery into a more dynamic and immersive experience. On mobile, the rack becomes an infinite, swipeable experience, allowing users to browse pieces continuously through natural touch gestures. With a minimalist interface, fluid animations, and a bold visual identity, SEIZA introduces a different approach to product discovery, highlighting each piece and the personality behind every collection.",
+    "exp.tag_main": "Main quest",
+    "exp.tag_side": "Side quest",
+    "exp.tag_first": "Level 1",
+    "exp.spot": "Frontend Engineer & UX Designer · Nov 2021 – now",
+    "exp.n1": "Frontend Developer (Freelance) · Dec 2021 – Nov 2022",
+    "exp.neki": "Full Stack Developer · Nov 2020 – Oct 2021",
+    "edu.postgrad": "Postgraduate in Software Engineering — Estácio (In progress)",
+    "edu.degree": "Systems Analysis and Development — Estácio (Jul 2026)",
+    "edu.ux": "UX/UI Design — EBAC, British School of Creative Arts & Technology (Aug 2024 – Jun 2025)",
     "project.link.code": "View code ↗",
     "project.link.site": "Visit site ↗",
     "project.link.project": "View project ↗",
