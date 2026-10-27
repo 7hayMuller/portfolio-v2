@@ -11,7 +11,7 @@ const translations = {
     "experience.text":
       "+5 anos desenvolvendo produtos SaaS e experiências digitais de grande escala, alcançando milhões de consumidores. Unindo React, TypeScript e UX/UI para criar soluções de alta performance, com tecnologia de ponta e identidade visual.",
     "project1.sub":
-      "Criado a partir da necessidade de organizar minha própria viagem, o My Trip Buddy rapidamente evoluiu para muito além da ideia inicial. O aplicativo reúne destinos, hotéis, voos, itinerários, orçamento, documentos e até o planejamento dos looks para cada dia das férias, centralizando tudo em uma única experiência. O projeto foi concebido para reduzir a complexidade do planejamento e oferecer ao viajante uma forma prática e agradável de visualizar toda a viagem. Para complementar essa experiência, a interface adota uma identidade inspirada no neobrutalismo, combinando um visual marcante com uma navegação intuitiva e organizada. Em breve na Google Play Store!",
+      "Criado a partir da necessidade de organizar minha própria viagem, o My Trip Buddy rapidamente evoluiu para muito além da ideia inicial. O aplicativo reúne destinos, hotéis, voos, itinerários, orçamento, documentos e até o planejamento dos looks para cada dia das férias, centralizando tudo em uma única experiência. O projeto foi concebido para reduzir a complexidade do planejamento e oferecer ao viajante uma forma prática e agradável de visualizar toda a viagem. Para complementar essa experiência, a interface adota uma identidade inspirada no neobrutalismo, combinando um visual marcante com uma navegação intuitiva e organizada. Já disponível na Google Play!",
     "project2.sub":
       "O Party Studio é um estúdio criativo impulsionado por IA para quem quer ir além do convite tradicional. Em poucos minutos, você cria convites personalizados com fotos, vídeos e trilha sonora, transformando um simples convite em uma experiência que reflete o estilo da sua festa.",
     "project3.sub":
@@ -31,6 +31,9 @@ const translations = {
     "edu.postgrad": "Pós-graduação em Engenharia de Software — Estácio (em andamento)",
     "edu.degree": "Análise e Desenvolvimento de Sistemas — Estácio (jul 2026)",
     "edu.ux": "UX/UI Design — EBAC, Escola Britânica de Artes Criativas e Tecnologia (ago 2024 – jun 2025)",
+    "lang.pt": "Português — Nativo",
+    "lang.en": "Inglês — Avançado",
+    "project.link.play": "Baixar na Google Play ↗",
     "project.link.code": "Ver código ↗",
     "project.link.site": "Ver site ↗",
     "project.link.project": "Ver projeto ↗",
@@ -52,7 +55,7 @@ const translations = {
     "experience.text":
       "5+ years building SaaS products and large-scale digital experiences, reaching millions of consumers. Combining React, TypeScript, and UX/UI to create high-performance solutions with cutting-edge technology and distinctive design.",
     "project1.sub":
-      "Born out of the need to organize my own trip, My Trip Buddy quickly grew far beyond its initial idea. The app brings together destinations, hotels, flights, itineraries, budget, documents, and even outfit planning for each day of the trip, centralizing everything into a single experience. It was designed to reduce the complexity of trip planning and give travelers a practical, enjoyable way to visualize the whole journey. To complement that experience, the interface adopts a neobrutalist-inspired identity, pairing a bold visual style with intuitive, organized navigation. Coming soon to the Google Play Store!",
+      "Born out of the need to organize my own trip, My Trip Buddy quickly grew far beyond its initial idea. The app brings together destinations, hotels, flights, itineraries, budget, documents, and even outfit planning for each day of the trip, centralizing everything into a single experience. It was designed to reduce the complexity of trip planning and give travelers a practical, enjoyable way to visualize the whole journey. To complement that experience, the interface adopts a neobrutalist-inspired identity, pairing a bold visual style with intuitive, organized navigation. Now available on Google Play!",
     "project2.sub":
       "Party Studio is an AI-powered creative studio for anyone who wants to go beyond the traditional invitation. In just a few minutes, you create personalized invites with photos, videos, and a soundtrack, turning a simple invitation into an experience that reflects your party's style.",
     "project3.sub":
@@ -72,6 +75,9 @@ const translations = {
     "edu.postgrad": "Postgraduate in Software Engineering — Estácio (In progress)",
     "edu.degree": "Systems Analysis and Development — Estácio (Jul 2026)",
     "edu.ux": "UX/UI Design — EBAC, British School of Creative Arts & Technology (Aug 2024 – Jun 2025)",
+    "lang.pt": "Portuguese — Native",
+    "lang.en": "English — Advanced",
+    "project.link.play": "Get it on Google Play ↗",
     "project.link.code": "View code ↗",
     "project.link.site": "Visit site ↗",
     "project.link.project": "View project ↗",
